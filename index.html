@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antivirus</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Antivirus</h1>
+    </header>
+    <div class="container">
+        <h2>Scannez votre ordinateur</h2>
+        <p>Cliquez sur le bouton ci-dessous pour commencer le scan.</p>
+        <button id="scanButton">Scan</button>
+        <div id="scanResult"></div>
+    </div>
+
+    <script>
+        document.getElementById("scanButton").addEventListener("click", function() {
+            // Votre code JavaScript pour le scan irait ici
+            // Ceci est juste un exemple d'interface utilisateur.
+            document.getElementById("scanResult").textContent = "Analyse en cours...";
+            setTimeout(function() {
+                document.getElementById("scanResult").textContent = "Aucun virus trouvé.";
+            }, 3000); // Simule une analyse pendant 3 secondes
+        });
+    </script>
+</body>
+</html>
